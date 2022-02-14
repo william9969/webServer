@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>listarCliente</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list lines="full" class="ion-no-margin">
+  <ion-list-header lines="full">
+    <ion-label>
+     Listado de Clientes
+    </ion-label>
+  </ion-list-header>
+  <ion-menu-toggle auto-hide="false" *ngFor="let c of listClientes">
+    <ion-toolbar>
+      <ion-title size="large">Cliente  {{c.nombres}} </ion-title>
+    </ion-toolbar>
+
+    <ion-item>
+      <ion-label >
+        Cedula: {{c.cedula}}
+      </ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label >
+      Direccion: {{c.direccion}}
+    </ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label >
+      Coreo: {{c.correo}}
+    </ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label >
+      Contraseña: {{c.contrasenia}}
+    </ion-label>
+  </ion-item>
+  <ion-button (click)='eliminarCliente(c.cedula)' color="danger">Eliminar Cliente </ion-button>
+  </ion-menu-toggle>
+  
+  </ion-list>
+</ion-content>

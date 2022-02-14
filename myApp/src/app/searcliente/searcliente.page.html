@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Buscar Cliente</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list lines="full" class="ion-no-margin">
+    <ion-list-header lines="full">
+      <ion-label>
+       Buscar Cliente
+      </ion-label>
+    </ion-list-header>
+    
+    <ion-item>
+      <ion-label >Ingrese la Cedula</ion-label>
+      <ion-input [(ngModel)]="cedulaBuscar" placeholder="example: 0106002108"></ion-input>
+    </ion-item>
+    
+    <section>
+      <ion-button (click)='searchPersona()' expand="block">Bucar Persona</ion-button>
+    </section>
+    <br/>
+    <br/>
+    <ion-item>
+      <ion-label >
+        Nombre: {{nombres}}
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label >
+        Cedula: {{cedulaBuscar}}
+      </ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label >
+      Direccion: {{direccion}}
+    </ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label >
+      Coreo: {{correo}}
+    </ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label >
+      Contraseña: {{contrasenia}}
+    </ion-label>
+  </ion-item>
+  </ion-list>
+
+</ion-content>

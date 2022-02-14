@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Agregar Cliente</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list lines="full" class="ion-no-margin">
+    <ion-list-header lines="full">
+      <ion-label>
+        Agregar Persona
+      </ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label position="fixed">cedula</ion-label>
+      <ion-input [(ngModel)]="cedula" placeholder="example: 0106002108"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="fixed">Nombre Completo</ion-label>
+      <ion-input [(ngModel)]="nombres" placeholder="Example: William Ramiro Sinchi Morocho"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed">Direccion</ion-label>
+      <ion-input [(ngModel)]="direccion" placeholder="Example: Av. Americas y..."></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed">Correo</ion-label>
+      <ion-input [(ngModel)]="correo" placeholder="Example: example@account.com"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed">Contraseña</ion-label>
+      <ion-input [(ngModel)]="contrasenia" type="password" placeholder=""></ion-input>
+    </ion-item>
+
+    <section>
+      <ion-button (click)='addPersona()' expand="block">Agregar Persona</ion-button>
+    </section>
+
+  </ion-list>
+
+  <p>
+    {{responseData}}
+  </p>
+</ion-content>
